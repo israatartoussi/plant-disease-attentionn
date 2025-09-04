@@ -1,0 +1,18 @@
+{
+  "variant": "bam",
+  "epochs": 200,
+  "img_size": 256,
+  "batch_size": 32,
+  "seed": 42,
+  "val_pct": 0.1,
+  "accuracy_mean": 0.6571126388154416,
+  "precision_mean": 0.6924020423664469,
+  "recall_mean": 0.6571126388154416,
+  "f1_mean": 0.6521126079825456,
+  "accuracy_std": 0.041438225019226206,
+  "precision_std": 0.036304275914818114,
+  "recall_std": 0.041438225019226206,
+  "f1_std": 0.04830925281500648,
+  "n_folds": 5,
+  "note": "Means/stds computed on held-out TEST folds."
+}

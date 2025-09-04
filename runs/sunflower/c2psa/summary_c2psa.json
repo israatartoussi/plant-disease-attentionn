@@ -1,0 +1,18 @@
+{
+  "variant": "c2psa",
+  "epochs": 200,
+  "img_size": 256,
+  "batch_size": 32,
+  "seed": 42,
+  "val_pct": 0.1,
+  "accuracy_mean": 0.9399450926561428,
+  "precision_mean": 0.9437843669056875,
+  "recall_mean": 0.9399450926561428,
+  "f1_mean": 0.9398321581612012,
+  "accuracy_std": 0.019824601305773196,
+  "precision_std": 0.016887908777124646,
+  "recall_std": 0.019824601305773196,
+  "f1_std": 0.019919989338041663,
+  "n_folds": 5,
+  "note": "Means/stds computed on held-out TEST folds."
+}

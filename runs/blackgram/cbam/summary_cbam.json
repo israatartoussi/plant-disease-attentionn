@@ -1,0 +1,18 @@
+{
+  "variant": "cbam",
+  "epochs": 200,
+  "img_size": 256,
+  "batch_size": 32,
+  "seed": 42,
+  "val_pct": 0.1,
+  "accuracy_mean": 0.9871090094084035,
+  "precision_mean": 0.9878723728947344,
+  "recall_mean": 0.9871090094084035,
+  "f1_mean": 0.9871895594057584,
+  "accuracy_std": 0.009180783019498293,
+  "precision_std": 0.008642244840764831,
+  "recall_std": 0.009180783019498293,
+  "f1_std": 0.009119795932138087,
+  "n_folds": 5,
+  "note": "Means/stds computed on held-out TEST folds."
+}

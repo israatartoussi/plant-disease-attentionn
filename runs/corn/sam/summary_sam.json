@@ -1,0 +1,18 @@
+{
+  "variant": "sam",
+  "epochs": 200,
+  "img_size": 256,
+  "batch_size": 32,
+  "seed": 42,
+  "val_pct": 0.1,
+  "accuracy_mean": 0.9859804268364579,
+  "precision_mean": 0.9861482110640782,
+  "recall_mean": 0.9859804268364579,
+  "f1_mean": 0.9859168595257065,
+  "accuracy_std": 0.006484284389592213,
+  "precision_std": 0.006459390850145054,
+  "recall_std": 0.006484284389592213,
+  "f1_std": 0.006556177020724562,
+  "n_folds": 5,
+  "note": "Means/stds computed on held-out TEST folds."
+}

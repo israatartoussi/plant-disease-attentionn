@@ -1,0 +1,10 @@
+                                            precision    recall  f1-score   support
+
+Corn___Cercospora_leaf_spot Gray_leaf_spot     0.9677    0.8738    0.9184       103
+                        Corn___Common_rust     1.0000    0.9916    0.9958       238
+               Corn___Northern_Leaf_Blight     0.9378    0.9949    0.9655       197
+                            Corn___healthy     1.0000    1.0000    1.0000       233
+
+                                  accuracy                         0.9792       771
+                                 macro avg     0.9764    0.9651    0.9699       771
+                              weighted avg     0.9798    0.9792    0.9790       771

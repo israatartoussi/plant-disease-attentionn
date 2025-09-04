@@ -1,0 +1,11 @@
+               precision    recall  f1-score   support
+
+  Anthracnose     0.9452    0.9718    0.9583        71
+BacterialSpot     0.6288    0.9121    0.7444        91
+         Curl     0.9571    0.5726    0.7166       117
+      Healthy     0.9388    1.0000    0.9684        46
+     RingSpot     0.9630    0.9720    0.9674       107
+
+     accuracy                         0.8542       432
+    macro avg     0.8866    0.8857    0.8710       432
+ weighted avg     0.8855    0.8542    0.8511       432

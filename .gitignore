@@ -2,9 +2,18 @@
 datasets*/
 datasets_merged*/
 
-# Training runs (ignore all, then allow selected small artifacts)
-runs/*
+# Ignore all runs by default
+runs/**
+
+# Re-include runs + report bundle (allow traversal)
+!runs/
+!runs/report/
 !runs/report/**
+
+# (اختياري) اسمحي ببعض الآرتيفاكتات الخفيفة من كل الداتا/الفاريانت/الفولد
+!runs/*/
+!runs/*/*/
+!runs/*/*/fold*/
 !runs/*/*/summary_*.json
 !runs/*/*/metrics_*.csv
 !runs/*/*/fold*/confusion_matrix*.png

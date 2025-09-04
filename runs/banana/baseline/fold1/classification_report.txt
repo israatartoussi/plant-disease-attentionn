@@ -1,0 +1,10 @@
+                precision    recall  f1-score   support
+
+       cordana     0.9706    1.0000    0.9851        33
+       healthy     1.0000    0.9615    0.9804        26
+pestalotiopsis     0.9189    1.0000    0.9577        34
+      sigatoka     1.0000    0.9684    0.9840        95
+
+      accuracy                         0.9787       188
+     macro avg     0.9724    0.9825    0.9768       188
+  weighted avg     0.9802    0.9787    0.9789       188

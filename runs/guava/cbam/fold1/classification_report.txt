@@ -1,0 +1,10 @@
+               precision    recall  f1-score   support
+
+       Canker     0.6842    0.8125    0.7429        16
+          Dot     0.4762    0.6667    0.5556        15
+Mummification     0.6667    0.7059    0.6857        17
+         Rust     0.7500    0.2143    0.3333        14
+
+     accuracy                         0.6129        62
+    macro avg     0.6443    0.5998    0.5794        62
+ weighted avg     0.6439    0.6129    0.5894        62

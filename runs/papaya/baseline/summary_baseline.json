@@ -1,0 +1,18 @@
+{
+  "variant": "baseline",
+  "epochs": 200,
+  "img_size": 256,
+  "batch_size": 32,
+  "seed": 42,
+  "val_pct": 0.1,
+  "accuracy_mean": 0.8323107330067886,
+  "precision_mean": 0.8568191378734926,
+  "recall_mean": 0.8323107330067886,
+  "f1_mean": 0.831506486956655,
+  "accuracy_std": 0.021729324157370906,
+  "precision_std": 0.027806584947119087,
+  "recall_std": 0.021729324157370906,
+  "f1_std": 0.019137084475139836,
+  "n_folds": 5,
+  "note": "Means/stds computed on held-out TEST folds."
+}
