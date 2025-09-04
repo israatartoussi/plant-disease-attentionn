@@ -1,0 +1,43 @@
+# Allow running either as a module or as a script by absolute path
+try:
+    from models.mobilevitv2_baseline import get_mobilevitv2_base
+    from models.c2psa import C2PSA
+except ImportError:
+    from mobilevitv2_baseline import get_mobilevitv2_base
+    from c2psa import C2PSA
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+class MobileViTv2_C2PSA(nn.Module):
+    """
+    Wraps a MobileViT-v2 (timm) backbone, applies C2PSA on the final feature map,
+    then uses the original classification head.
+    """
+    def __init__(self, num_classes: int = 4, dummy_size: int = 224):
+        super().__init__()
+        self.base = get_mobilevitv2_base(num_classes=num_classes)
+
+        with torch.no_grad():
+            self.base.backbone.eval()
+            feat = self.base.backbone.forward_features(torch.zeros(1, 3, dummy_size, dummy_size))
+            if feat.dim() != 4:
+                raise RuntimeError(f"Expected (B,C,H,W) features, got {feat.shape}")
+            ch = int(feat.shape[1])
+
+        self.c2psa = C2PSA(in_channels=ch)
+        self.has_forward_head = hasattr(self.base.backbone, "forward_head")
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        feat = self.base.backbone.forward_features(x)  # (B, C, H, W)
+        feat = self.c2psa(feat)
+        if self.has_forward_head:
+            return self.base.backbone.forward_head(feat, pre_logits=False)
+        # Fallback (rare)
+        feat = F.adaptive_avg_pool2d(feat, 1)
+        feat = torch.flatten(feat, 1)
+        return self.base.classifier(feat)
+
+def get_mobilevitv2_c2psa(num_classes: int):
+    return MobileViTv2_C2PSA(num_classes=num_classes)

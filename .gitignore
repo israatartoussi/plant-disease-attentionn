@@ -1,0 +1,19 @@
+# Datasets
+datasets*/
+datasets_merged*/
+
+# Training runs (keep only reports)
+runs/*
+!runs/report/**
+
+# Checkpoints & large artifacts
+*.pth
+*.pt
+*.ckpt
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.log
