@@ -2,18 +2,14 @@
 datasets*/
 datasets_merged*/
 
-# Training runs (keep only reports)
+# Training runs (ignore all, then allow selected small artifacts)
 runs/*
 !runs/report/**
+!runs/*/*/summary_*.json
+!runs/*/*/metrics_*.csv
+!runs/*/*/fold*/confusion_matrix*.png
+!runs/*/*/fold*/tsne.png
+!runs/*/*/fold*/classification_report.txt
 
 # Checkpoints & large artifacts
 *.pth
-*.pt
-*.ckpt
-
-# Python cache
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.DS_Store
-*.log
